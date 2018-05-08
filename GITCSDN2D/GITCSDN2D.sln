@@ -1,12 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GITCSDN2D", "GITCSDN2D.csproj", "{8A96937E-64D0-DF87-6D5A-C386E772126A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A96937E-64D0-DF87-6D5A-C386E772126A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A96937E-64D0-DF87-6D5A-C386E772126A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A96937E-64D0-DF87-6D5A-C386E772126A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A96937E-64D0-DF87-6D5A-C386E772126A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
