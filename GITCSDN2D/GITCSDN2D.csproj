@@ -78,6 +78,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\EnemyScript.cs" />
     <Compile Include="Assets\Scripts\HelthScript.cs" />
     <Compile Include="Assets\Scripts\MoveScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScript.cs" />
