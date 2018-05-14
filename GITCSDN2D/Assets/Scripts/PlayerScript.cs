@@ -26,7 +26,25 @@ public class PlayerScript : MonoBehaviour {
                 weapon.Attack(false);
             }
         }
-	}
+        //下面代码确保主角不在相机边界之外
+        var dist = (transform.position - Camera.main.transform.position).z;
+
+        var leftBorder = Camera.main.ViewportToWorldPoint(
+            new Vector3(0, 0, dist)).x;
+
+        var rightBorder = Camera.main.ViewportToWorldPoint(
+             new Vector3(1, 0, dist)).x;
+
+        var topBorder = Camera.main.ViewportToWorldPoint(
+            new Vector3(0, 0, dist)).y;
+
+        var buttonBorder = Camera.main.ViewportToWorldPoint(
+            new Vector3(0,1, dist)).y;
+        transform.position = new Vector3(
+            Mathf.Clamp(transform.position.x, leftBorder, rightBorder),
+            Mathf.Clamp(transform.position.y, topBorder, buttonBorder),
+            transform.position.z);
+    }
      void FixedUpdate()
     {
         Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
@@ -46,7 +64,7 @@ public class PlayerScript : MonoBehaviour {
         if (damagePlayer)
         {
             HelthScript playHealth = this.GetComponent<HelthScript>();
-            if (damagePlayer != null)
+            if (playHealth != null)
             {
                 playHealth.damage(1);
             }

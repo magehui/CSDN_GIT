@@ -82,6 +82,8 @@
     <Compile Include="Assets\Scripts\HelthScript.cs" />
     <Compile Include="Assets\Scripts\MoveScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScript.cs" />
+    <Compile Include="Assets\Scripts\RendererExtensions.cs.cs" />
+    <Compile Include="Assets\Scripts\ScrollingScript.cs" />
     <Compile Include="Assets\Scripts\ShotScript.cs" />
     <Compile Include="Assets\Scripts\WeponScript.cs" />
   </ItemGroup>
