@@ -24,6 +24,7 @@ public class PlayerScript : MonoBehaviour {
             if (weapon != null)
             {
                 weapon.Attack(false);
+                SoundEffectsHelper.instance.MakePlayShotSound();
             }
         }
         //下面代码确保主角不在相机边界之外
@@ -70,5 +71,9 @@ public class PlayerScript : MonoBehaviour {
             }
         }
     }
-
+     void OnDestroy()
+    {
+        //玩家死亡时实例化GameOverScript
+        transform.parent.gameObject.AddComponent<GameOverScript>();
+    }
 }

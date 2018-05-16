@@ -14,6 +14,8 @@ public class HelthScript : MonoBehaviour {
         hp -= damageCount;
         if (hp <= 0)
         {
+            SpecialEffectHepler.instance.Explosion(transform.position);
+            SoundEffectsHelper.instance.MakeExplosionSound();
             Destroy(gameObject);
         }
     }
